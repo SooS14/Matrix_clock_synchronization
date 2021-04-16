@@ -9,20 +9,20 @@ ___
 **start(N, Test_function)**
 >Call this function to start the program.
 
-+int N : number of process to start.
-+atom Test_function : the name of the function to use to test the program
-  -test_random (see **test_random**)
-  -exercise_5 (see file : td1-tps-logique-correction.pdf)
-  -test (if you want to design your own test, put your code here)
++ int N : number of process to start.
++ atom Test_function : the name of the function to use to test the program
+  - test_random (see **test_random**)
+  - exercise_5 (see file : td1-tps-logique-correction.pdf)
+  - test (if you want to design your own test, put your code here)
 
 
 **start_process(N, M, Pid_list, Test_function)**
 >Starts N processes. Newly created processes use the **do_something** function.
 
-+int N : an identifier for each process.
-+int M : the total number of processes.
-+list Pid_list : stores the pids of the processes for the test function.
-+atom Test_function : function to test the program, if test_random is given, it asks a few details needed for the test.
++ int N : an identifier for each process.
++ int M : the total number of processes.
++ list Pid_list : stores the pids of the processes for the test function.
++ atom Test_function : function to test the program, if test_random is given, it asks a few details needed for the test.
 
 
 **test_random(Pid_list, Event, Delay, Sleep, Matrix, Number)**
@@ -32,15 +32,15 @@ and give the atomic value "test_random" as a second argument.
 When used, the program will ask you a few information before running the program,
 see below :
 
-+bool Event : do you want to generate random events unrelated to messages ?
-  -y or n ; if y, processes have 1/3 chance to generate local events.
-+bool Delay : do you want the messages to be delayed with a random time ?
-  -y or n ; if y, a delay (1-500 ms) is applied to all messages.
-+bool Sleep : do you want the supervisor program to ocasionaly sleep during a random time ?
-  -y or n ; if y, processes have 1/3 chance to sleep during 1-500 ms.
-+bool Matrix : do you want to print the matrix at each step ?
- -y or n ; if y, prints all the matrixes at each step.
-+int Msg_per_proc : state the number of message to be sent.
++ bool Event : do you want to generate random events unrelated to messages ?
+  - y or n ; if y, processes have 1/3 chance to generate local events.
++ bool Delay : do you want the messages to be delayed with a random time ?
+  - y or n ; if y, a delay (1-500 ms) is applied to all messages.
++ bool Sleep : do you want the supervisor program to ocasionaly sleep during a random time ?
+  - y or n ; if y, processes have 1/3 chance to sleep during 1-500 ms.
++ bool Matrix : do you want to print the matrix at each step ?
+ - y or n ; if y, prints all the matrixes at each step.
++ int Msg_per_proc : state the number of message to be sent.
 
 >At the end of the test, the program sleep during a second and then prints the 
 clock matrix of each process. 
